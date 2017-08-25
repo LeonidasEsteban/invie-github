@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Invie - tus mejores guitarras!!</title>
+    <title>Precios de tus mejores guitarras!!</title>
     <meta charset="utf-8"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/invie.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
   </head>
-  <body>
-    <section id="portada" class="portada background"> <!-- portada -->
-      <header id="header" class="header contenedor"> <!-- header -->
+  <body class="precios">
+    <header id="header" class="header background"> <!-- header -->
+      <div class="contenedor">
         <figure class="logotipo"> <!-- logotipo -->
-          <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
+          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
         </figure>
         <span class="burguer-button icon-menu" id="burguer-button"></span>
         <nav class="menu" id="menu"> <!-- menu -->
@@ -21,57 +20,61 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="#guitarras">Guitarras</a>
+              <a href="index.html#guitarras">Guitarras</a>
             </li>
             <li>
               <a href="precios.html">Precios</a>
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
+    </header>
+    <section class="tabla">
       <div class="contenedor">
-        <h1 class="titulo">Guitarras <span>invie</span>sibles</h1><!-- titulo -->
-        <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3><!-- resumen -->
-        <a class="button" href="#guitarras">Conoce mas</a><!-- boton -->
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Precio</th>
+              <th>Descripción</th>
+               <th>Modelo</th>
+              <th>Precio</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
-    <section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
-      <h2>Nuestra guitarras</h2><!-- titulo -->
-      <div class="video-demo-contenedor">
-        <div class="video-demo">
-          <div class="video-responsive-contenedor">
-            <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <!-- <video src="video/320x240.ogg"></video> -->
-      <article class="guitarra"> <!-- guitarra 1 -->
-        <img class="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png"  alt="Guitarra Invie Acustica" width="350"/>
-        <div class="contenedor-guitarra-a">
-          <h3 class="title-b">Invie Acustica</h3>
-          <ol>
-            <li>Estilo vintage</li>
-            <li>Madera pura</li>
-            <li>Incluye estuche invisible de aluminio</li>
-          </ol>
-        </div>
-      </article>
-      <article class="guitarra b"> <!-- guitarra 2 -->
-        <img class="izquierda" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
-        <div class="contenedor-guitarra-b">
-          <h3 class="title-b">Invie Classic</h3>
-          <ol>
-            <li>Estilo vintage</li>
-            <li>Liviana</li>
-            <li>Inicia tu camino como Rockstar</li>
-          </ol>
-        </div>
-      </article>
     </section>
     <footer class="footer">
       <div class="contenedor">
         <div class="contacto">
-          <img data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco"/>
+          <img src="images/invie-white.png" alt="logotipo blanco"/>
           <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
           <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
         </div>
@@ -112,7 +115,6 @@
         </form>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
     <script>
       var consulta = window.matchMedia('(max-width: 500px)');
@@ -122,12 +124,6 @@
       var $menu = document.getElementById('menu');
       function toggleMenu(){
         $menu.classList.toggle('active')
-      };
-      function showMenu(){
-        $menu.classList.add('active');
-      };
-      function hideMenu(){
-        $menu.classList.remove('active');
       };
 
       function mediaQuery() {
@@ -152,13 +148,6 @@
       // function toggleMenu(){
       //   $menu.classList.toggle('active')
       // };
-
-      // Gestos touch
-      var $body = document.body;
-
-      var gestos = new Hammer($body);
-      gestos.on('swipeleft', hideMenu);
-      gestos.on('swiperight', showMenu);
     </script>
   </body>
 </html>
